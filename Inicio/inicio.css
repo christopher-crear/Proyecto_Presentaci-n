@@ -1,0 +1,469 @@
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        html,
+        body {
+            /* height: 100%;
+            margin: 0;
+            font-family: 'Inter', sans-serif;*/
+            color: #e0e0e0;
+            background-color: #111;
+            /* scroll-behavior: smooth; */
+        }
+
+        /* 
+        body {
+            min-height: 100vh;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        } */
+
+        /* CLASES DE NAVEGACIÓN */
+        .barra-navegacion {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: #111111;
+            border-radius: 20px;
+            padding: 8px 16px;
+            gap: 5px;
+        }
+
+        .boton-navegacion {
+            background-color: transparent;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border-radius: 6px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .boton-navegacion:hover {
+            background-color: lch(21.7% 0 296.81);
+        }
+
+        .boton-navegacion:active,
+        .boton-navegacion:focus {
+            background-color: #1A1F24;
+            outline: none;
+        }
+
+        .boton-navegacion::before {
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #82c4da;
+            border-radius: 3px;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .boton-navegacion:focus::before,
+        .boton-navegacion:active::before,
+        .boton-navegacion:hover::before {
+            opacity: 1;
+        }
+
+        .barra-navegacion:hover> :not(.boton-navegacion:hover) {
+            filter: blur(0.8px);
+            transform: scale(0.98);
+            transition: 0.3s;
+        }
+
+        /* CLASES DE TECLADO/CONTROLES (Flechas 3D) */
+        .tecla {
+            position: relative;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            background: linear-gradient(180deg, #282828, #202020);
+            box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 10px 20px 25px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            cursor: pointer;
+        }
+
+        .tecla .simbolo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: #e9e9e9;
+            font-size: 22px;
+            transition: transform 0.1s ease-in-out;
+            z-index: 10;
+        }
+
+        .tecla::before {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 4px;
+            bottom: 14px;
+            right: 12px;
+            background: linear-gradient(90deg, #232323, #4a4a4a);
+            border-radius: 10px;
+            box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.25), 10px 5px 10px rgba(0, 0, 0, 0.15);
+            border-left: 1px solid #0004;
+            border-bottom: 1px solid #0004;
+            border-top: 1px solid #0009;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .tecla:active {
+            transform: translateY(2px);
+            box-shadow: inset -4px 0 4px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.15), 0 0 0 2px rgba(0, 0, 0, 0.5), 5px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .tecla:active::before {
+            top: 5px;
+            left: 5px;
+            bottom: 11px;
+            right: 11px;
+            box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.15), 5px 3px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tecla:active .simbolo {
+            transform: translate(-50%, calc(-50% + 1px));
+        }
+
+        /* Controles de navegación entre secciones */
+        .controles-navegacion {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .tecla.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        /* Sobre mi */
+        .sobre {
+            display: flex;
+            padding: 65px 60px;
+            gap: 60px;
+            align-items: center;
+            max-width: 1400px;
+            width: 100%;
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .info h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .info p {
+            line-height: 1.8;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .imagen {
+            flex: 1;
+        }
+
+        .imagen img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Galeria fotos con efecto de cartas superpuestas */
+        .galeria {
+            width: 100%;
+        }
+
+        .encabezado {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .encabezado h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        /* Contenedor de las cartas con efecto de superposición */
+        .cuadricula {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+        }
+
+        /* Grupo de 3 cartas */
+        .grupo-cartas {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Cada carta con efecto glass */
+        .caja {
+            position: relative;
+            width: 280px;
+            height: 350px;
+            background: linear-gradient(rgba(255, 255, 255, 0.1), transparent);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            border-radius: 10px;
+            margin: 0 -60px;
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            transform: rotate(calc(var(--r) * 1deg));
+        }
+
+        /* Al hacer hover sobre el grupo, las cartas se separan */
+        .grupo-cartas:hover .caja {
+            transform: rotate(0deg);
+            margin: 0 10px;
+        }
+
+        .caja img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* Etiqueta inferior de cada carta */
+        .caja::before {
+            content: attr(data-text);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 0.9em;
+            font-weight: 500;
+            z-index: 10;
+        }
+
+
+        /* habilidades */
+        .habilidades {
+            background: #181818;
+            padding: 80px 40px;
+            width: 100%;
+        }
+
+        .contenedor {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 70px;
+            align-items: flex-start;
+        }
+
+        .info-hab {
+            flex: 1;
+        }
+
+        .info-hab h2 {
+            font-size: 2.5em;
+            color: #e0e0e0;
+            margin-bottom: 30px;
+        }
+
+        .info-hab p {
+            color: #999;
+            line-height: 1.8;
+            font-size: 1em;
+        }
+
+        .tecnologias {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .tech {
+            text-align: center;
+        }
+
+        .tech h3 {
+            font-size: 3em;
+            color: #5cb85c;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .tech p {
+            color: #e0e0e0;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+/* === HEADER ILUMINADO === */
+.header {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    overflow: hidden;
+    color: #fff;
+    background: radial-gradient(circle at 50% 50%, #14002b 0%, #050505 90%);
+    box-sizing: border-box;
+}
+
+/* Luz animada global más intensa */
+.header::before {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 180%;
+    height: 180%;
+    background: conic-gradient(
+        from 0deg,
+        #b75cff,
+        #6a50ff,
+        #00f0ff,
+        #6a50ff,
+        #b75cff
+    );
+    filter: blur(180px);
+    opacity: 0.6;
+    animation: luz-general 10s linear infinite;
+    z-index: 0;
+    border: none;
+    box-shadow: none;
+}
+
+/* Animación suave de luz */
+@keyframes luz-general {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Texto central */
+.texto-header {
+    text-align: center;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* separación entre elementos */
+    height: 100%;
+}
+
+/* Título centrado con margen superior */
+.texto-header h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-top: 20px; /* ajusta la distancia superior */
+    text-align: center;
+    text-shadow: 0 0 30px rgba(175, 64, 255, 0.9),
+                 0 0 60px rgba(0, 221, 235, 0.5);
+}
+
+.texto-header p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(0, 221, 235, 0.8),
+                 0 0 40px rgba(91, 66, 243, 0.5);
+}
+
+/* Barra de navegación */
+.barra-navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(17, 17, 17, 0.7);
+    border-radius: 20px;
+    padding: 12px 20px;
+    gap: 8px;
+    margin-top: 15px;
+    box-shadow: 0 0 25px rgba(91, 66, 243, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+/* Botones del menú */
+.boton-navegacion {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 10px 18px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.boton-navegacion:hover {
+    background-color: rgba(91, 66, 243, 0.3);
+}
+
+/* Muñecos */
+.muñeco-animado {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+/* Imagen flotante con brillo */
+.imagen-muñeco {
+    width: 200px;
+    animation: flotar 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 25px rgba(91, 66, 243, 1))
+            drop-shadow(0 0 40px rgba(0, 221, 235, 0.8));
+}
+
+/* Movimiento flotante */
+@keyframes flotar {
+    0% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-25px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(-5deg); }
+}
+
+/* Reflejo horizontal del muñeco derecho */
+.derecha {
+    transform: scaleX(-1);
+}

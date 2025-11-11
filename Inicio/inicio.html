@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHRISTOPHER DEV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="inicio.css">
+</head>
+
+
+<body>
+    <header class="header">
+    <div class="muñeco-animado izquierda">
+        <img src="https://uiverse.io/astronaut.png" alt="astronauta" class="imagen-muñeco" />
+    </div>
+
+    <div class="texto-header">
+        <h1>CHRISTOPHER ERAS</h1>
+        <p>Full Stack - Developer</p>
+        <div class="barra-navegacion max-w-4xl mx-auto mt-4 mb-20 shadow-lg shadow-blue-500/10">
+        <button class="boton-navegacion" onclick="navegarSeccion('inicio')">Inicio</button>
+        <button class="boton-navegacion" onclick="navegarSeccion('habilidades')">Habilidades</button>
+        <button class="boton-navegacion" onclick="navegarSeccion('galeria')">Galería</button>
+        <button class="boton-navegacion" onclick="navegarSeccion('')">Servicios</button>
+        <button class="boton-navegacion" onclick="navegarSeccion('')">Proyectos</button>
+        <button class="boton-navegacion" onclick="navegarSeccion('')">Servicios</button>
+        <button class="boton-navegacion" onclick="navegarSeccion('')">Contacto</button>
+    </div>
+    </div>
+
+    <div class="muñeco-animado derecha">
+        <img src="https://uiverse.io/astronaut.png" alt="astronauta" class="imagen-muñeco" />
+    </div>
+    
+</header>
+
+
+    
+
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section class="sobre" id="inicio">
+        <div class="info">
+            <h2>Hola, soy Christopher</h2>
+            <p>
+                Que tal, me presento mi nombre es <strong>Christopher Eras</strong>, tengo 18 años y soy de
+                <strong>Loja, Ecuador</strong>.
+                Actualmente estudio la carrera de <strong>Desarrollo de Software</strong> en el <strong>Instituto
+                    Superior Tecnológico Loja</strong>, donde me preparo para convertirme en un profesional en el
+                área tecnológica.
+            </p>
+            <p>
+                Desde pequeño me ha interesado la tecnología y la programación, por lo que disfruto aprender sobre
+                desarrollo web, aplicaciones móviles y nuevas herramientas que faciliten la creación de soluciones
+                digitales.
+            </p>
+            <p>
+                En mi tiempo libre, me gusta jugar baloncesto y videojuegos móviles, actividades que me ayudan a
+                relajarme y mantener el equilibrio entre el estudio y el entretenimiento.
+            </p>
+            <p>
+                He creado esta página web con el propósito de compartir mis conocimientos y experiencias en el mundo
+                del desarrollo de software. Espero que encuentres aquí información útil e interesante.
+            </p>
+            <p>
+                Si tienes alguna duda, sugerencia o simplemente quieres ponerte en contacto conmigo, puedes hacerlo a
+                través de mis redes sociales.
+                <strong>¡Gracias por visitar mi página web!</strong>
+            </p>
+        </div>
+
+        <div class="imagen">
+            <img src="../img/img_traje_2.jpg" alt="Christopher Eras">
+        </div>
+    </section>
+
+    <!-- Controles de navegación para sección Inicio -->
+    <div class="controles-navegacion">
+        <article class="tecla disabled" onclick="navegarSeccion('inicio')">
+            <aside class="simbolo">↑</aside>
+        </article>
+        <article class="tecla" onclick="navegarSeccion('habilidades')">
+            <aside class="simbolo">↓</aside>
+        </article>
+    </div>
+
+    <!-- SECCIÓN HABILIDADES -->
+    <section class="habilidades" id="habilidades">
+        <div class="contenedor">
+            <div class="tecnologias">
+                <div class="tech">
+                    <h3>HTML</h3>
+                    <p>Html5</p>
+                </div>
+                <div class="tech">
+                    <h3>CSS3</h3>
+                    <p>Css</p>
+                </div>
+                <div class="tech">
+                    <h3>JS</h3>
+                    <p>React JS</p>
+                </div>
+                <div class="tech">
+                    <h3>JS</h3>
+                    <p>JavaScript</p>
+                </div>
+                <div class="tech">
+                    <h3>PY</h3>
+                    <p>Python</p>
+                </div>
+                <div class="tech">
+                    <h3>SQL</h3>
+                    <p>MySQL/MongoDB</p>
+                </div>
+            </div>
+
+            <div class="info-hab">
+                <h2>Habilidades de Programación</h2>
+                <p>
+                    A lo largo de mi formación he aprendido varios lenguajes y tecnologías que me permiten construir
+                    aplicaciones completas, tanto en el frontend como en el backend.<br>
+                    HTML5 y CSS3 son la base de mis conocimientos en desarrollo web, permitiéndome estructurar y dar
+                    estilo a las interfaces de usuario.<br>
+                    JavaScript es el lenguaje que utilizo para dar interactividad a las páginas, y con React JS
+                    desarrollo interfaces dinámicas y modernas.<br>
+                    Python (PY) me ha permitido trabajar en automatización, análisis de datos y desarrollo de
+                    aplicaciones más versátiles.<br>
+                    En cuanto al manejo de bases de datos, tengo conocimientos en MySQL y MongoDB (SQL), lo que me
+                    permite gestionar información de forma eficiente en entornos relacionales y no relacionales.<br>
+                    Estos son algunos de los lenguajes y herramientas que manejo actualmente, aunque me mantengo en
+                    constante aprendizaje, incorporando nuevas tecnologías para seguir creciendo como desarrollador.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Controles de navegación para sección Habilidades -->
+    <div class="controles-navegacion">
+        <article class="tecla" onclick="navegarSeccion('inicio')">
+            <aside class="simbolo">↑</aside>
+        </article>
+        <article class="tecla" onclick="navegarSeccion('galeria')">
+            <aside class="simbolo">↓</aside>
+        </article>
+    </div>
+
+    <!-- SECCIÓN GALERÍA con efecto de cartas superpuestas -->
+    <section class="galeria" id="galeria">
+        <div class="encabezado">
+            <h2>Christopher off-code</h2>
+            <p>El otro lado del desarrollador.</p>
+        </div>
+
+        <!-- Las cartas se agrupan de 3 en 3 y al hacer hover se separan -->
+        <div class="cuadricula">
+            <!-- Primer grupo de 3 cartas -->
+            <div class="grupo-cartas">
+                <div class="caja" style="--r: -15" data-text="">
+                    <img src="../img/img_traje_2.jpg" alt="Imagen 1">
+                </div>
+                <div class="caja" style="--r: 0" data-text="Proyecto 2">
+                    <img src="../img/IMG_0279.JPG" alt="Imagen 2">
+                </div>
+                <div class="caja" style="--r: 15" data-text="Proyecto 3">
+                    <img src="../img/imagen_auto.jpg" alt="Imagen 3">
+                </div>
+                <div class="caja" style="--r: 0" data-text="Proyecto 2">
+                    <img src="../img/img_traje.jpg" alt="Imagen 2">
+                </div>
+            </div>
+
+            <!-- Segundo grupo de 3 cartas -->
+            <div class="grupo-cartas">
+                <div class="caja" style="--r: -15" data-text="Proyecto 4">
+                    <img src="../img/img_cumple.jpg" alt="Imagen 4">
+                </div>
+                <div class="caja" style="--r: 0" data-text="Proyecto 5">
+                    <img src="../img/img_carro.jpg" alt="Imagen 5">
+                </div>
+                <div class="caja" style="--r: 15" data-text="Proyecto 6">
+                    <img src="../img/img_rey.jpg" alt="Imagen 6">
+                </div>
+                <div class="caja" style="--r: 0" data-text="Proyecto 5">
+                    <img src="../img/image.png" alt="Imagen 5">
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Controles de navegación para sección Galería -->
+    <div class="controles-navegacion">
+        <article class="tecla" onclick="navegarSeccion('habilidades')">
+            <aside class="simbolo">↑</aside>
+        </article>
+        <article class="tecla disabled" onclick="navegarSeccion('galeria')">
+            <aside class="simbolo">↓</aside>
+        </article>
+    </div>
+
+    <script>
+        function navegarSeccion(seccionId) {
+            const seccion = document.getElementById(seccionId);
+            if (seccion) {
+                seccion.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Navegación con teclado (opcional)
+        document.addEventListener('keydown', function (e) {
+            const secciones = ['inicio', 'habilidades', 'galeria'];
+            const seccionActual = obtenerSeccionActual();
+            const indiceActual = secciones.indexOf(seccionActual);
+
+            if (e.key === 'ArrowUp' && indiceActual > 0) {
+                navegarSeccion(secciones[indiceActual - 1]);
+            } else if (e.key === 'ArrowDown' && indiceActual < secciones.length - 1) {
+                navegarSeccion(secciones[indiceActual + 1]);
+            }
+        });
+
+        function obtenerSeccionActual() {
+            const secciones = ['inicio', 'habilidades', 'galeria'];
+            const scrollPos = window.scrollY + window.innerHeight / 2;
+
+            for (let seccion of secciones) {
+                const elemento = document.getElementById(seccion);
+                if (elemento) {
+                    const top = elemento.offsetTop;
+                    const bottom = top + elemento.offsetHeight;
+                    if (scrollPos >= top && scrollPos <= bottom) {
+                        return seccion;
+                    }
+                }
+            }
+            return 'inicio';
+        }
+    </script>
+
+</body>
+
+</html>

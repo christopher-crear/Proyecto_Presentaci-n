@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHRISTOPHER DEV</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="contenedor-login">
+        <!-- Sección del Logo -->
+        <div class="seccion-logo">
+            <div class="logo" id="contenedorLogo">
+                <img src="../img/christopher_logo-removebg-preview.png" class="activa" alt="Logo 1">
+                <img src="../img/christopher_logo_pc.png" alt="Logo 2">
+            </div>
+            <h1 class="nombre-marca">CHRISTOPHER DEV</h1>
+        </div>
+
+        <!-- Tarjeta de Login -->
+        <div class="tarjeta">
+            <div class="contenido-tarjeta">
+                <h2>Bienvenido</h2>
+                <p class="subtitulo">Inicia sesión para continuar</p>
+
+                <form id="formularioLogin">
+                    <div class="grupo-formulario">
+                        <label for="usuario">Usuario</label>
+                        <input 
+                            type="text"
+                            id="usuario" 
+                            placeholder="ej: username"
+                            required
+                        >
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="contrasena">Contraseña</label>
+                        <input 
+                            type="password" 
+                            id="contrasena" 
+                            placeholder="••••••••"
+                            required
+                        >
+                    </div>
+
+                    <div id="mensaje" class="mensaje"></div>
+
+                    <button type="submit" class="boton-login">
+                        Iniciar Sesión
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
