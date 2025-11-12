@@ -7,37 +7,37 @@
     <title>CHRISTOPHER DEV</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="inicio.css">
+    <link rel="icon" href="../img/icon_pagina.png">
 </head>
 
 
 <body>
-    <header class="header">
-    <div class="muñeco-animado izquierda">
-        <img src="https://uiverse.io/astronaut.png" alt="astronauta" class="imagen-muñeco" />
-    </div>
+    <header class="header" id="encabezado">
+        <div class="muñeco-animado izquierda">
+            <img src="https://uiverse.io/astronaut.png" alt="astronauta" class="imagen-muñeco" />
+        </div>
 
-    <div class="texto-header">
-        <h1>CHRISTOPHER ERAS</h1>
-        <p>Full Stack - Developer</p>
-        <div class="barra-navegacion max-w-4xl mx-auto mt-4 mb-20 shadow-lg shadow-blue-500/10">
-        <button class="boton-navegacion" onclick="navegarSeccion('inicio')">Inicio</button>
-        <button class="boton-navegacion" onclick="navegarSeccion('habilidades')">Habilidades</button>
-        <button class="boton-navegacion" onclick="navegarSeccion('galeria')">Galería</button>
-        <button class="boton-navegacion" onclick="navegarSeccion('')">Servicios</button>
-        <button class="boton-navegacion" onclick="navegarSeccion('')">Proyectos</button>
-        <button class="boton-navegacion" onclick="navegarSeccion('')">Servicios</button>
-        <button class="boton-navegacion" onclick="navegarSeccion('')">Contacto</button>
-    </div>
-    </div>
+        <div class="texto-header">
+            <h1>CHRISTOPHER ERAS</h1>
+            <p>Full Stack - Developer</p>
+            <div class="barra-navegacion max-w-4xl mx-auto mt-4 mb-20 shadow-lg shadow-blue-500/10">
+                <a href="../Inicio/inicio.html" class="boton-navegacion">Inicio</a>
+                <a href="#habilidades" class="boton-navegacion">Habilidades</a>
+                <a href="#galeria" class="boton-navegacion">Galería</a>
+                <a href="../Servicios/servicios.html" class="boton-navegacion">Servicios</a>
+                <a href="../Proyectos/proyectos.html" class="boton-navegacion">Proyectos</a>
+                <a href="../Contacto/contacto.html" class="boton-navegacion">Contacto</a>
+            </div>
+        </div>
 
-    <div class="muñeco-animado derecha">
-        <img src="https://uiverse.io/astronaut.png" alt="astronauta" class="imagen-muñeco" />
-    </div>
-    
-</header>
+        <div class="muñeco-animado derecha">
+            <img src="https://uiverse.io/astronaut.png" alt="astronauta" class="imagen-muñeco" />
+        </div>
+
+    </header>
 
 
-    
+
 
     <!-- SECCIÓN SOBRE MÍ -->
     <section class="sobre" id="inicio">
@@ -77,7 +77,7 @@
 
     <!-- Controles de navegación para sección Inicio -->
     <div class="controles-navegacion">
-        <article class="tecla disabled" onclick="navegarSeccion('inicio')">
+        <article class="tecla" onclick="navegarSeccion('encabezado')">
             <aside class="simbolo">↑</aside>
         </article>
         <article class="tecla" onclick="navegarSeccion('habilidades')">
@@ -148,45 +148,44 @@
     <!-- SECCIÓN GALERÍA con efecto de cartas superpuestas -->
     <section class="galeria" id="galeria">
         <div class="encabezado">
-            <h2>Christopher off-code</h2>
-            <p>El otro lado del desarrollador.</p>
+            <h2>Christopher Proyectos</h2>
+            <p>Mi galería de proyectos</p>
         </div>
 
-        <!-- Las cartas se agrupan de 3 en 3 y al hacer hover se separan -->
+        <!-- Las cartas se agrupan de 3 en 3  -->
         <div class="cuadricula">
             <!-- Primer grupo de 3 cartas -->
             <div class="grupo-cartas">
-                <div class="caja" style="--r: -15" data-text="">
-                    <img src="../img/img_traje_2.jpg" alt="Imagen 1">
+                <div class="caja" style="--r: -15" data-text="NAV GUN - Scracht">
+                    <img src="../img/Img_juego-naves.jpg" alt="Imagen 1">
                 </div>
-                <div class="caja" style="--r: 0" data-text="Proyecto 2">
-                    <img src="../img/IMG_0279.JPG" alt="Imagen 2">
+                <div class="caja" style="--r: 0" data-text="DUCK img_duck-hunt - Scracht">
+                    <img src="../img/img_duck-hunt.jpg" alt="Imagen 2">
                 </div>
-                <div class="caja" style="--r: 15" data-text="Proyecto 3">
-                    <img src="../img/imagen_auto.jpg" alt="Imagen 3">
+                <div class="caja" style="--r: 15" data-text="DADO SUPREMO - Kotlin Android">
+                    <img src="../img/img_appdado.png" alt="Imagen 3">
                 </div>
-                <div class="caja" style="--r: 0" data-text="Proyecto 2">
-                    <img src="../img/img_traje.jpg" alt="Imagen 2">
+                <div class="caja" style="--r: 0" data-text="Biblioteca ISTL - App Inventor">
+                    <img src="../img/img_appbiblioteca.png" alt="Imagen 2">
                 </div>
             </div>
 
             <!-- Segundo grupo de 3 cartas -->
             <div class="grupo-cartas">
-                <div class="caja" style="--r: -15" data-text="Proyecto 4">
-                    <img src="../img/img_cumple.jpg" alt="Imagen 4">
+                <div class="caja" style="--r: -15" data-text="Pagina de ahorro - HTML,CSS">
+                    <img src="../img/img_proyecto_Ahorro.png" alt="Imagen 4">
                 </div>
-                <div class="caja" style="--r: 0" data-text="Proyecto 5">
-                    <img src="../img/img_carro.jpg" alt="Imagen 5">
+                <div class="caja" style="--r: 0" data-text="Pagina Tienda de ropa - HTML,CSS,JS">
+                    <img src="../img/img_tiendaropa.png" alt="Imagen 5">
                 </div>
-                <div class="caja" style="--r: 15" data-text="Proyecto 6">
-                    <img src="../img/img_rey.jpg" alt="Imagen 6">
+                <div class="caja" style="--r: 15" data-text="Pagina Personal - HTML,CSS,JS">
+                    <img src="../img/img_personal_pagina.png" alt="Imagen 6">
                 </div>
-                <div class="caja" style="--r: 0" data-text="Proyecto 5">
-                    <img src="../img/image.png" alt="Imagen 5">
+                <div class="caja" style="--r: 0" data-text="Pagina Startup Tech - HTML,CSS">
+                    <img src="../img/img_startupTech.png" alt="Imagen 5">
                 </div>
             </div>
         </div>
-        
     </section>
 
     <!-- Controles de navegación para sección Galería -->
@@ -194,49 +193,66 @@
         <article class="tecla" onclick="navegarSeccion('habilidades')">
             <aside class="simbolo">↑</aside>
         </article>
-        <article class="tecla disabled" onclick="navegarSeccion('galeria')">
+        <article class="tecla" onclick="navegarSeccion('mensajes')">
             <aside class="simbolo">↓</aside>
         </article>
     </div>
 
-    <script>
-        function navegarSeccion(seccionId) {
-            const seccion = document.getElementById(seccionId);
-            if (seccion) {
-                seccion.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
+    <!-- SECCIÓN TESTIMONIOS -->
+    <section class="testimonios" id="mensajes">
+        <div class="carrusel">
+            <div class="diapositivas">
+                <div class="testimonio">
+                    <p class="texto">
+                        “Ser programador no es solo escribir código, es aprender a resolver problemas con creatividad y
+                        paciencia.
+                        Cada error, cada bug y cada noche frente a la pantalla te acerca un paso más a convertirte en el
+                        profesional que soñaste ser.”
+                    </p>
+                    <div class="autor">
+                        <img src="../img/img_traje_2.jpg" alt="Christopher Eras" class="autor-foto">
+                        <div class="autor-datos">
+                            <h4>Christopher David Eras Granda</h4>
+                            <p>Frases Motivacionales</p>
+                        </div>
+                    </div>
+                </div>
 
-        // Navegación con teclado (opcional)
-        document.addEventListener('keydown', function (e) {
-            const secciones = ['inicio', 'habilidades', 'galeria'];
-            const seccionActual = obtenerSeccionActual();
-            const indiceActual = secciones.indexOf(seccionActual);
+                <div class="testimonio">
+                    <p class="texto">
+                        “La programación no se trata de memorizar lenguajes, sino de aprender a pensar de forma lógica,
+                        crear soluciones donde otros ven obstáculos y transformar ideas en realidades digitales.”
+                    </p>
+                    <div class="autor">
+                        <img src="../img/img_traje.jpg" alt="Christopher Eras" class="autor-foto">
+                        <div class="autor-datos">
+                            <h4>Christopher Davi Eras Granda</h4>
+                            <p>Frases Motivacionales</p>
+                        </div>
+                    </div>
+                </div>
 
-            if (e.key === 'ArrowUp' && indiceActual > 0) {
-                navegarSeccion(secciones[indiceActual - 1]);
-            } else if (e.key === 'ArrowDown' && indiceActual < secciones.length - 1) {
-                navegarSeccion(secciones[indiceActual + 1]);
-            }
-        });
+                <div class="testimonio">
+                    <p class="texto">
+                        “Cuando sientas que el código no compila y todo parece fallar, recuerda que incluso los mejores
+                        programadores comenzaron desde cero.
+                        Lo importante no es no equivocarte, sino tener la determinación de seguir depurando hasta
+                        lograrlo.”
+                    </p>
+                    <div class="autor">
+                        <img src="../img/img_traje.jpg" alt="Christopher Eras" class="autor-foto">
+                        <div class="autor-datos">
+                            <h4>Christopher Davi Eras Granda</h4>
+                            <p>Frases Motivacionales</p>
+                        </div>
+                    </div>
+                </div>
 
-        function obtenerSeccionActual() {
-            const secciones = ['inicio', 'habilidades', 'galeria'];
-            const scrollPos = window.scrollY + window.innerHeight / 2;
+            </div>
+        </div>
+    </section>
 
-            for (let seccion of secciones) {
-                const elemento = document.getElementById(seccion);
-                if (elemento) {
-                    const top = elemento.offsetTop;
-                    const bottom = top + elemento.offsetHeight;
-                    if (scrollPos >= top && scrollPos <= bottom) {
-                        return seccion;
-                    }
-                }
-            }
-            return 'inicio';
-        }
-    </script>
+    <script src="inicio.js"></script>
 
 </body>
 

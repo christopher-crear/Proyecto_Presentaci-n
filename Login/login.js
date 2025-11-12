@@ -15,8 +15,8 @@ setInterval(cambiarLogo, 25000);
 
 // SCRIPT DE VALIDACIÓN DE LOGIN
 // Usuario y contraseña válidos
-const USUARIO_VALIDO = "Cris";
-const CONTRASENA_VALIDA = "110552";
+const USUARIO_VALIDO = "christopher";
+const CONTRASENA_VALIDA = "eras";
 const URL_REDIRECCION = "../Inicio/inicio.html";
 
 // Capturar elementos del DOM

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHRISTOPHER DEV</title>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.99/build/spline-viewer.js"></script>
+    <link rel="stylesheet" href="servicios.css">
+    <link rel="icon" href="../img/icon_pagina.png">
+</head>
+
+<body>
+    <div class="spline-background">
+        <spline-viewer url="https://prod.spline.design/BCBirCmO5cEe6eRO/scene.splinecode"></spline-viewer>
+    </div>
+
+    <div class="contenido-principal">
+        <div class="barra-navegacion max-w-4xl mx-auto mt-4 mb-20 shadow-lg shadow-blue-500/10">
+                <a href="../Inicio/inicio.html" class="boton-navegacion">Inicio</a>
+                <a href="../Inicio/inicio.html" class="boton-navegacion">Habilidades</a>
+                <a href="../Inicio/inicio.html" class="boton-navegacion">Galería</a>
+                <a href="../Servicios/servicios.html" class="boton-navegacion">Servicios</a>
+                <a href="../Proyectos/proyectos.html" class="boton-navegacion">Proyectos</a>
+                <a href="../Contacto/contacto.html" class="boton-navegacion">Contacto</a>
+            </div>
+        
+        <div class="seccion-video">
+            <h2 class="titulo-video">Video Destacado</h2>
+            <div class="contenedor-video">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="../vid/video.mp4" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="cart-icon">
+            <button class="cart-btn" onclick="toggleCart()">
+                🛒
+                <span class="cart-badge" id="cartBadge">0</span>
+            </button>
+        </div>
+
+        <div class="cart-modal" id="cartModal">
+            <div class="cart-tabs">
+                <button class="cart-tab active" onclick="switchTab('cart')">Carrito</button>
+                <button class="cart-tab" onclick="switchTab('history')">Historial</button>
+            </div>
+
+            <div class="cart-content active" id="cartContent">
+                <div class="cart-header">Tu Carrito</div>
+                <div id="cartItems"></div>
+                <div class="cart-summary" id="cartSummary" style="display: none;">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>IVA (12%)</span>
+                        <span id="tax">$0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="total">$0.00</span>
+                    </div>
+                    <button class="checkout-btn" onclick="checkout()">Proceder al Pago</button>
+                </div>
+            </div>
+
+            <div class="cart-content" id="historyContent">
+                <div class="cart-header">Historial de Compras</div>
+                <div id="historyItems"></div>
+            </div>
+        </div>
+
+        <div class="titulo-seccion">
+            <h1>Mis Servicios</h1>
+            <p>Soluciones tecnológicas diseñadas para ti</p>
+        </div>
+
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <div class="servicio-contenido">
+                    <div class="servicio-icono">🖥️</div>
+                    <h3 class="servicio-titulo">Mantenimiento de Computadora</h3>
+                    <p class="servicio-descripcion">
+                        Servicio completo de mantenimiento preventivo y correctivo para equipos de cómputo.
+                    </p>
+                    <ul class="servicio-features">
+                        <li>Limpieza profunda de hardware</li>
+                        <li>Optimización del sistema</li>
+                        <li>Eliminación de virus y malware</li>
+                        <li>Actualización de componentes</li>
+                    </ul>
+                    <div class="servicio-price">$49.99</div>
+                    <button class="servicio-btn"
+                        onclick="addToCart('Mantenimiento de Computadora', 49.99, '🖥️')">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-contenido">
+                    <div class="servicio-icono">📱</div>
+                    <h3 class="servicio-titulo">Desarrollo de Aplicaciones Móviles</h3>
+                    <p class="servicio-descripcion">
+                        Creación de aplicaciones móviles nativas y multiplataforma con las últimas tecnologías.
+                    </p>
+                    <ul class="servicio-features">
+                        <li>Android e iOS</li>
+                        <li>React Native / Flutter</li>
+                        <li>Diseño UI/UX integrado</li>
+                        <li>Publicación en tiendas</li>
+                    </ul>
+                    <div class="servicio-price">$799.99</div>
+                    <button class="servicio-btn"
+                        onclick="addToCart('Desarrollo de Aplicaciones Móviles', 799.99, '📱')">Agregar al
+                        Carrito</button>
+                </div>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-contenido">
+                    <div class="servicio-icono">🌐</div>
+                    <h3 class="servicio-titulo">Desarrollo de Páginas Web</h3>
+                    <p class="servicio-descripcion">
+                        Sitios web profesionales, modernos y optimizados para SEO y rendimiento.
+                    </p>
+                    <ul class="servicio-features">
+                        <li>Diseño responsive</li>
+                        <li>Optimización SEO</li>
+                        <li>Hosting y dominio incluido</li>
+                        <li>Panel de administración</li>
+                    </ul>
+                    <div class="servicio-price">$499.99</div>
+                    <button class="servicio-btn" onclick="addToCart('Desarrollo de Páginas Web', 499.99, '🌐')">Agregar
+                        al Carrito</button>
+                </div>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-contenido">
+                    <div class="servicio-icono">🎨</div>
+                    <h3 class="servicio-titulo">Diseño de Interfaz</h3>
+                    <p class="servicio-descripcion">
+                        Diseño de interfaces modernas y experiencias de usuario atractivas e intuitivas.
+                    </p>
+                    <ul class="servicio-features">
+                        <li>Prototipado en Figma/Adobe XD</li>
+                        <li>Diseño responsive</li>
+                        <li>Sistema de componentes</li>
+                        <li>Guías de estilo incluidas</li>
+                    </ul>
+                    <div class="servicio-price">$299.99</div>
+                    <button class="servicio-btn" onclick="addToCart('Diseño de Interfaz', 299.99, '🎨')">Agregar al
+                        Carrito</button>
+                </div>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-contenido">
+                    <div class="servicio-icono">📄</div>
+                    <h3 class="servicio-titulo">Redacción de Documentos para Proyectos</h3>
+                    <p class="servicio-descripcion">
+                        Documentación técnica profesional para proyectos de software y tecnología.
+                    </p>
+                    <ul class="servicio-features">
+                        <li>Documentación técnica</li>
+                        <li>Manuales de usuario</li>
+                        <li>Propuestas de proyecto</li>
+                        <li>Especificaciones funcionales</li>
+                    </ul>
+                    <div class="servicio-price">$149.99</div>
+                    <button class="servicio-btn"
+                        onclick="addToCart('Redacción de Documentos para Proyectos', 149.99, '📄')">Agregar al
+                        Carrito</button>
+                </div>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-contenido">
+                    <div class="servicio-icono">✅</div>
+                    <h3 class="servicio-titulo">QA (Quality Assurance)</h3>
+                    <p class="servicio-descripcion">
+                        Pruebas exhaustivas de calidad para asegurar el correcto funcionamiento de tu software.
+                    </p>
+                    <ul class="servicio-features">
+                        <li>Pruebas funcionales</li>
+                        <li>Pruebas de usabilidad</li>
+                        <li>Testing automatizado</li>
+                        <li>Reporte detallado de bugs</li>
+                    </ul>
+                    <div class="servicio-price">$199.99</div>
+                    <button class="servicio-btn" onclick="addToCart('QA (Quality Assurance)', 199.99, '✅')">Agregar al
+                        Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="servicios.js"></script>
+</body>
+
+</html>

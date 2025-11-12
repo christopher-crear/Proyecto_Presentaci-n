@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHRISTOPHER DEV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="proyectos.css">
+    <link rel="icon" href="../img/icon_pagina.png">
+</head>
+
+<body>
+    <nav>
+        <div class="barra-navegacion">
+            <a href="../Inicio/inicio.html" class="boton-navegacion">Inicio</a>
+            <a href="../Inicio/inicio.html" class="boton-navegacion">Habilidades</a>
+            <a href="../Inicio/inicio.html" class="boton-navegacion">Galería</a>
+            <a href="../Servicios/servicios.html" class="boton-navegacion">Servicios</a>
+            <a href="../Proyectos/proyectos.html" class="boton-navegacion">Proyectos</a>
+            <a href="../Contacto/contacto.html" class="boton-navegacion">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Cuerpo -->
+    <div class="contenedor">
+        <!-- Buscador de Uiverse.io -->
+        <div class="caja-buscador">
+            <input type="text" placeholder="Buscar" id="termino-busqueda" class="campo-buscar"
+                onkeyup="buscarProductos()">
+            <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
+                    fill-rule="evenodd"></path>
+            </svg>
+        </div>
+
+        <table id="tabla-datos" style="display: contents;">
+            <tbody class="cuadricula-productos" id="cuadricula-productos">
+                <!-- Producto 1 -->
+                <tr style="display: contents;" class="fila-producto">
+                    <td class="tarjeta-producto">
+                        <div class="imagen-producto">
+                            <img src="../img/img_proyecto_Ahorro.png" height="250px" alt="Proyecto 1">
+                        </div>
+                        <div class="nombre-producto">Proyecto Ahorro Energia</div>
+                        <div class="precio-producto">Ahorro Energia Software</div>
+                        <div class="tallas-disponibles">
+                            <span class="talla">HTML</span>
+                            <span class="talla">CSS</span>
+                        </div>
+                        <div class="capa-descripcion">
+                            <p>Mi proyecto es una página web informativa dedicada al ahorro de energía en el desarrollo
+                                de software.
+                                El sitio incluye secciones con información educativa, consejos prácticos, ejemplos
+                                visuales y estadísticas que muestran cómo un software optimizado puede reducir el
+                                consumo eléctrico.
+                                El objetivo es concienciar a los usuarios y programadores sobre la importancia de crear
+                                programas más eficientes, promoviendo así la sostenibilidad y el cuidado del medio
+                                ambiente.</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Producto 2 -->
+                <tr style="display: contents;" class="fila-producto">
+                    <td class="tarjeta-producto">
+                        <div class="imagen-producto">
+                            <img src="../img/img_tiendaropa.png" height="250px" alt="Proyecto 2">
+                        </div>
+                        <div class="nombre-producto">Proyecto Tienda de Ropa</div>
+                        <div class="precio-producto">Timeless & Tailored</div>
+                        <div class="tallas-disponibles">
+                            <span class="talla">JS</span>
+                            <span class="talla">HTML</span>
+                            <span class="talla">CSS</span>
+                        </div>
+                        <div class="capa-descripcion">
+                            <p>Mi proyecto consiste en una página web interactiva que presenta un catálogo de ropa
+                                moderna y accesible. El sitio incluye secciones con imágenes de productos,
+                                descripciones, precios y opciones de búsqueda o filtrado para facilitar la experiencia
+                                del usuario.
+                                El objetivo es ofrecer una plataforma visual y funcional donde los clientes puedan
+                                explorar diferentes estilos, conocer las últimas tendencias y seleccionar prendas de
+                                forma rápida y sencilla.</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Producto 3 -->
+                <tr style="display: contents;" class="fila-producto">
+                    <td class="tarjeta-producto">
+                        <div class="imagen-producto">
+                            <img src="../img/img_personal_pagina.png" height="250px" alt="Proyecto 3">
+                        </div>
+                        <div class="nombre-producto">Proyecto Personal Pagina</div>
+                        <div class="precio-producto">CHRISTOPHER ERAS - Developer</div>
+                        <div class="tallas-disponibles">
+                            <span class="talla">HTML</span>
+                            <span class="talla">CSS</span>
+                        </div>
+                        <div class="capa-descripcion">
+                            <p>Mi proyecto es una página web personal diseñada para presentar mi perfil, mis habilidades
+                                y mis proyectos. El sitio incluye una sección de presentación, una galería de trabajos,
+                                un apartado de contacto y enlaces a mis redes.
+                                El objetivo es mostrar mi identidad digital de forma profesional y creativa, sirviendo
+                                como una carta de presentación en línea para futuras oportunidades académicas o
+                                laborales.</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Producto 4 -->
+                <tr style="display: contents;" class="fila-producto">
+                    <td class="tarjeta-producto">
+                        <div class="imagen-producto">
+                            <img src="../img/img_startupTech.png" height="250px" alt="Proyecto 4">
+                        </div>
+                        <div class="nombre-producto">Proyecto StartupTech</div>
+                        <div class="precio-producto">StartupTech</div>
+                        <div class="tallas-disponibles">
+                            <span class="talla">JS</span>
+                            <span class="talla">HTML</span>
+                            <span class="talla">CSS</span>
+                        </div>
+                        <div class="capa-descripcion">
+                            <p>StartupTech es una página web creada completamente a partir de mis propios prompts, con
+                                el objetivo de mostrar cómo la inteligencia artificial puede apoyar la creación de
+                                proyectos tecnológicos.
+                                El sitio presenta información sobre innovación, desarrollo de software y emprendimiento
+                                digital, además de incluir secciones informativas, diseño moderno y contenido generado
+                                con IA.
+                                El propósito de esta página es demostrar el potencial creativo y técnico que puede
+                                lograrse combinando la programación y la inteligencia artificial en el desarrollo web.
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Producto 5 -->
+                <tr style="display: contents;" class="fila-producto">
+                    <td class="tarjeta-producto">
+                        <div class="imagen-producto">
+                            <img src="../img/img_appbiblioteca.png" height="250px" alt="Proyecto 5">
+                        </div>
+                        <div class="nombre-producto">Proyecto app biblioteca</div>
+                        <div class="precio-producto">Biblioteca ISTL</div>
+                        <div class="tallas-disponibles">
+                            <span class="talla">App Inventor</span>
+                        </div>
+                        <div class="capa-descripcion">
+                            <p>Mi proyecto es una aplicación móvil desarrollada en App Inventor que permite gestionar
+                                una biblioteca de forma sencilla y accesible. La app incluye funciones para registrar,
+                                visualizar y eliminar libros, además de buscar por filtros y mostrar imágenes y
+                                descripciones.
+                                El objetivo es facilitar la organización y consulta de libros desde un teléfono móvil,
+                                promoviendo el uso de herramientas tecnológicas para la gestión educativa y cultural.
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Producto 6 -->
+                <tr style="display: contents;" class="fila-producto">
+                    <td class="tarjeta-producto">
+                        <div class="imagen-producto">
+                            <img src="../img/Img_juego-naves.jpg" height="250px" alt="Proyecto 6">
+                        </div>
+                        <div class="nombre-producto">Proyecto Juego de Naves</div>
+                        <div class="precio-producto">NAV GUN</div>
+                        <div class="tallas-disponibles">
+                            <span class="talla">Scracht</span>
+                        </div>
+                        <div class="capa-descripcion">
+                            <p>Mi proyecto es un juego creado en Scratch donde el jugador controla una nave espacial que
+                                debe eliminar a los alienígenas invasores. El juego incluye animaciones, sonidos y un
+                                sistema de puntuación que aumenta con cada enemigo derrotado.
+                                El objetivo es divertir y desarrollar habilidades lógicas y de programación, combinando
+                                creatividad, diseño y control de eventos dentro del entorno de Scratch.</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Producto 7 -->
+                <tr style="display: contents;" class="fila-producto">
+                    <td class="tarjeta-producto">
+                        <div class="imagen-producto">
+                            <img src="../img/img_dado.png" height="250px" alt="Proyecto 7">
+                        </div>
+                        <div class="nombre-producto">Proyecto app Dados</div>
+                        <div class="precio-producto">DADO SUPREMO</div>
+                        <div class="tallas-disponibles">
+                            <span class="talla">Kotlin</span>
+                            <span class="talla">XML</span>
+                            <span class="talla">Android</span>
+                        </div>
+                        <div class="capa-descripcion">
+                            <p>Mi proyecto es una aplicación móvil desarrollada en Android Studio que simula un juego de
+                                dados interactivo. El usuario puede lanzar el dado, obtener resultados aleatorios y
+                                competir por el número más alto.
+                                La app incluye botones, imágenes dinámicas y mensajes de resultado, ofreciendo una
+                                experiencia simple pero divertida.
+                                El objetivo es entretenimiento y aprendizaje, demostrando cómo se pueden crear juegos
+                                funcionales con programación móvil.</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Producto 8 -->
+                <tr style="display: contents;" class="fila-producto">
+                    <td class="tarjeta-producto">
+                        <div class="imagen-producto">
+                            <img src="../img/img_duck-hunt.jpg  " height="250px" alt="Proyecto 8">
+                        </div>
+                        <div class="nombre-producto">Proyecto Juego Retro</div>
+                        <div class="precio-producto">DUCK HUNT</div>
+                        <div class="tallas-disponibles">
+                            <span class="talla">Scratch</span>
+                        </div>
+                        <div class="capa-descripcion">
+                            <p>Mi proyecto es un juego retro creado en Scratch inspirado en el clásico Duck Hunt. El
+                                jugador utiliza el cursor como mira para disparar a los patos que aparecen volando por
+                                la pantalla, sumando puntos por cada acierto.
+                                El juego incluye animaciones, efectos de sonido, conteo de puntuación y niveles de
+                                dificultad, ofreciendo una experiencia divertida y nostálgica.
+                                El objetivo es recrear un clásico arcade mientras se aplican conceptos de programación y
+                                diseño de juegos en Scratch.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Mensaje de no hay resultado -->
+        <div id="sin-resultado" class="mensaje oculto"></div>
+    </div>
+
+    <!-- Llamado al js -->
+    <script src="busqueda_proyectos.js"></script>
+</body>
+
+</html>
